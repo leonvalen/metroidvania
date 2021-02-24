@@ -319,7 +319,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 771a77bb5fbf1e4479936143bfe6aed1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offsetZ: -20
+  boundaryRangeX:
+    min: -20.38
+    max: 59.5
+  boundaryRangeY:
+    min: -5.51
+    max: 17.44
+  offsetZ: -25.9
+  offsetX: 0
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -6426,7 +6433,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 4a5c1d08264cc2b4ab904e2eb3a2f3bd, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 0
   m_CollisionDetection: 1
@@ -6472,6 +6479,7 @@ MonoBehaviour:
   animatorController: {fileID: 1441583573}
   jumpSfx: {fileID: 8300000, guid: 050133961ee4c944bb6607fe7e985ab1, type: 3}
   shootSfx: {fileID: 8300000, guid: b9c851a22a6c48146aef61d8dc90f106, type: 3}
+  nonZeroMovementX: 0
 --- !u!1 &1030618499
 GameObject:
   m_ObjectHideFlags: 0

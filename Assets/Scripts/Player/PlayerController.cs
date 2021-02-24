@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour
     // Control Variables
     private Vector2 movementDirection;
     private Vector2 movementDirectionNonZero;
-    private float nonZeroMovementX;
+    public float nonZeroMovementX;
 
     private bool jumpButtonPressed;
     private bool fireButtonPressed;
