@@ -46,6 +46,12 @@ public class CameraController : MonoBehaviour
         cameraSizeY.max = Camera.main.ViewportToWorldPoint(new Vector3(0, 1, 0)).y - this.transform.position.y;
     }
 
+    public void UpdateBoundaries(RangeData boundaryX, RangeData boundaryY)
+    {
+        boundaryRangeX = boundaryX;
+        boundaryRangeY = boundaryY;
+    }
+
     void Update()
     {
         // solo necesitamos el signo
