@@ -4,8 +4,26 @@ using UnityEngine;
 
 public class ProjectileController : MonoBehaviour
 {
+    [SerializeField] string tagName = "Enemy";
+    [SerializeField] float damagePoints = 1;
     [SerializeField] float autoDestroyDelay = 4f;
     private Rigidbody2D rigidbody2D;
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag.Equals(tagName))
+        {
+            //buscamos si tiene la implementación de la interface
+            var component = collision.gameObject.GetComponent<IDamageTarget>();
+            // si no es nulo implementa la interface adecuadamente
+            if (component != null)
+            {
+                component.TakeDamage(damagePoints);
+                // destruimos el projectil
+                Destroy(this.gameObject);
+            }
+        }
+    }
 
 
     //definir el mismo método con el mismo nombre
